@@ -1,0 +1,19 @@
+relationship 3ac47768-2ac1-47d7-bc2e-233f985254cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Gastos.FECHA
+	toColumn: LocalDateTable_4536466b-ed21-409a-9c98-5c6f77233bff.Date
+
+relationship 47a8be76-4fb7-448f-8031-12d8d3a46dc1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Calendario CEA'.Date
+	toColumn: LocalDateTable_3e29391a-c7b5-4d76-b94b-dca5e355b445.Date
+
+relationship 310734a4-bfae-c334-7afb-b7f877d04f91
+	fromColumn: CEA.FechaPago
+	toColumn: 'Calendario CEA'.Date
+
+relationship 29ef51eb-478b-6d93-73ea-55e70629bd13
+	isActive: false
+	fromColumn: CEA.'CEA Fecha Recibo'
+	toColumn: 'Calendario CEA'.Date
+

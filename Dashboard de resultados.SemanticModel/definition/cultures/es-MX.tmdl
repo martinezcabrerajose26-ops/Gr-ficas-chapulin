@@ -1,0 +1,2594 @@
+cultureInfo es-MX
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "gasto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gasto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "FECHA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "gasto.fecha.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "VariationSource": "FECHA",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.fecha.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "VariationSource": "FECHA",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.fecha.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "VariationSource": "FECHA",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.fecha.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "VariationSource": "FECHA",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.fecha.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "VariationSource": "FECHA",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.concepto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "CONCEPTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "concepto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.descripcion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "DESCRIPCION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descripcion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DESCRIPCIÓN": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.monto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "MONTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.me_SAT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Mes SAT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me SAT": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.me_SAT_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Mes SAT 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me SAT 2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.me_SAT_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Mes SAT 3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me SAT 3": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.tipo_gasto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "TipoGasto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo gasto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TipoGasto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TIPO DE GASTO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "MesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.catalogo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "CATALOGO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "catalogo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.total_gastos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Total Gastos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total gastos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate gasto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall gasto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.gastos_fijos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Gastos Fijos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gastos fijos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.gastos_variables": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "Gastos Variables"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gastos variables": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "lista_concepto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ListaConceptos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lista concepto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ListaConceptos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "lista_concepto.tipo_gasto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ListaConceptos",
+			          "ConceptualProperty": "TipoGasto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo gasto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TipoGasto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Gasto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "lista_concepto.concepto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ListaConceptos",
+			          "ConceptualProperty": "Concepto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "concepto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gasto.gastos_variables1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Gastos",
+			          "ConceptualProperty": "% Gastos Variables"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% gastos variables": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage gasto variable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct gasto variable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "cea": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cea": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.fecha_pago": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "FechaPago"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha pago": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaPago": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "cea.fecha_pago.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "VariationSource": "FechaPago",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.fecha_pago.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "VariationSource": "FechaPago",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha pago año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.fecha_pago.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "VariationSource": "FechaPago",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha pago trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.fecha_pago.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "VariationSource": "FechaPago",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha pago me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.fecha_pago.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "VariationSource": "FechaPago",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha pago día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.concepto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "Concepto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "concepto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.monto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "Monto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_año_pago": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Año Pago"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA año pago": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_mes_número": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Mes Número"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA mes número": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CEA me número": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_mes_nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Mes Nombre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA mes nombre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CEA me nombre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_total_pagado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Total Pagado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA total pagado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cea aggregate pagado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cea overall pagado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total Pagado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_cantidad_de_pagos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Cantidad de Pagos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA cantidad de pagos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Cantidad de Pagos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cea.CEA_promedio_mensual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CEA",
+			          "ConceptualProperty": "CEA Promedio Mensual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEA promedio mensual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "cea_fecha_pago_año_has_cea_fecha_pago_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.año": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.año"
+			          }
+			        },
+			        "cea.fecha_pago.trimestre": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.año"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "cea.fecha_pago.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años1"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_jerarquía_de_fecha_has_cea_fecha_pago_día": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.jerarquía_de_fecha"
+			          }
+			        },
+			        "cea.fecha_pago.día": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_jerarquía_de_fecha_has_cea_fecha_pago_me": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.jerarquía_de_fecha"
+			          }
+			        },
+			        "cea.fecha_pago.me": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_jerarquía_de_fecha_has_cea_fecha_pago_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.jerarquía_de_fecha"
+			          }
+			        },
+			        "cea.fecha_pago.trimestre": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_jerarquía_de_fecha_has_cea_fecha_pago_año": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.jerarquía_de_fecha"
+			          }
+			        },
+			        "cea.fecha_pago.año": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago"
+			          }
+			        },
+			        "cea.fecha_pago.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_pago_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_me_has_gasto_fecha_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.me": {
+			          "Target": {
+			            "Entity": "gasto.fecha.me"
+			          }
+			        },
+			        "gasto.fecha.día": {
+			          "Target": {
+			            "Entity": "gasto.fecha.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.me"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.día"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gasto.fecha.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gasto.fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_trimestre_has_gasto_fecha_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.trimestre": {
+			          "Target": {
+			            "Entity": "gasto.fecha.trimestre"
+			          }
+			        },
+			        "gasto.fecha.me": {
+			          "Target": {
+			            "Entity": "gasto.fecha.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.trimestre"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.me"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gasto.fecha.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gasto.fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_año_has_gasto_fecha_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.año": {
+			          "Target": {
+			            "Entity": "gasto.fecha.año"
+			          }
+			        },
+			        "gasto.fecha.trimestre": {
+			          "Target": {
+			            "Entity": "gasto.fecha.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.año"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.trimestre"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gasto.fecha.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gasto.fecha.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_jerarquía_de_fecha_has_gasto_fecha_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha.jerarquía_de_fecha"
+			          }
+			        },
+			        "gasto.fecha.día": {
+			          "Target": {
+			            "Entity": "gasto.fecha.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_jerarquía_de_fecha_has_gasto_fecha_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha.jerarquía_de_fecha"
+			          }
+			        },
+			        "gasto.fecha.me": {
+			          "Target": {
+			            "Entity": "gasto.fecha.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_jerarquía_de_fecha_has_gasto_fecha_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha.jerarquía_de_fecha"
+			          }
+			        },
+			        "gasto.fecha.trimestre": {
+			          "Target": {
+			            "Entity": "gasto.fecha.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_jerarquía_de_fecha_has_gasto_fecha_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha.jerarquía_de_fecha"
+			          }
+			        },
+			        "gasto.fecha.año": {
+			          "Target": {
+			            "Entity": "gasto.fecha.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "gasto_fecha_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto.fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha"
+			          }
+			        },
+			        "gasto.fecha.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto.fecha"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_promedio_mensual": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_promedio_mensual": {
+			          "Target": {
+			            "Entity": "cea.CEA_promedio_mensual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_promedio_mensual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_promedio_mensual"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_cantidad_de_pagos": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_cantidad_de_pagos": {
+			          "Target": {
+			            "Entity": "cea.CEA_cantidad_de_pagos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_cantidad_de_pagos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_cantidad_de_pagos"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_total_pagado": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_total_pagado": {
+			          "Target": {
+			            "Entity": "cea.CEA_total_pagado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_total_pagado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_total_pagado"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_mes_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_mes_nombre": {
+			          "Target": {
+			            "Entity": "cea.CEA_mes_nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_mes_nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_mes_nombres"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_mes_número": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_mes_número": {
+			          "Target": {
+			            "Entity": "cea.CEA_mes_número"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_mes_número"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_mes_números"
+			        }
+			      ]
+			    },
+			    "cea_has_CEA_año_pago": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.CEA_año_pago": {
+			          "Target": {
+			            "Entity": "cea.CEA_año_pago"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.CEA_año_pago"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_CEA_año_pago"
+			        }
+			      ]
+			    },
+			    "cea_has_monto": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.monto": {
+			          "Target": {
+			            "Entity": "cea.monto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.monto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_monto"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "cea.monto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monto_indicates_how_expensive_ceas_are"
+			        }
+			      ]
+			    },
+			    "cea_has_concepto": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.concepto": {
+			          "Target": {
+			            "Entity": "cea.concepto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.concepto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_conceptos"
+			        }
+			      ]
+			    },
+			    "cea_has_fecha_pago": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea": {
+			          "Target": {
+			            "Entity": "cea"
+			          }
+			        },
+			        "cea.fecha_pago": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ceas_have_fecha_pago"
+			        }
+			      ]
+			    },
+			    "gasto_has_gastos_variables1": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.gastos_variables1": {
+			          "Target": {
+			            "Entity": "gasto.gastos_variables1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.gastos_variables1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have__gastos_variables"
+			        }
+			      ]
+			    },
+			    "lista_concepto_has_concepto": {
+			      "Binding": {
+			        "ConceptualEntity": "ListaConceptos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "lista_concepto": {
+			          "Target": {
+			            "Entity": "lista_concepto"
+			          }
+			        },
+			        "lista_concepto.concepto": {
+			          "Target": {
+			            "Entity": "lista_concepto.concepto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "lista_concepto"
+			            },
+			            "Object": {
+			              "Role": "lista_concepto.concepto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "lista_conceptos_have_conceptos"
+			        }
+			      ]
+			    },
+			    "lista_concepto_has_tipo_gasto": {
+			      "Binding": {
+			        "ConceptualEntity": "ListaConceptos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "lista_concepto": {
+			          "Target": {
+			            "Entity": "lista_concepto"
+			          }
+			        },
+			        "lista_concepto.tipo_gasto": {
+			          "Target": {
+			            "Entity": "lista_concepto.tipo_gasto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "lista_concepto"
+			            },
+			            "Object": {
+			              "Role": "lista_concepto.tipo_gasto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "lista_conceptos_have_tipo_gastos"
+			        }
+			      ]
+			    },
+			    "gasto_has_gastos_variables": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.gastos_variables": {
+			          "Target": {
+			            "Entity": "gasto.gastos_variables"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.gastos_variables"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_gastos_variables"
+			        }
+			      ]
+			    },
+			    "gasto_has_gastos_fijos": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.gastos_fijos": {
+			          "Target": {
+			            "Entity": "gasto.gastos_fijos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.gastos_fijos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_gastos_fijos"
+			        }
+			      ]
+			    },
+			    "gasto_has_total_gastos": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.total_gastos": {
+			          "Target": {
+			            "Entity": "gasto.total_gastos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.total_gastos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_total_gastos"
+			        }
+			      ]
+			    },
+			    "gasto_has_catalogo": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.catalogo": {
+			          "Target": {
+			            "Entity": "gasto.catalogo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.catalogo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_catalogos"
+			        }
+			      ]
+			    },
+			    "gasto_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.mes_num": {
+			          "Target": {
+			            "Entity": "gasto.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "gasto_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.me": {
+			          "Target": {
+			            "Entity": "gasto.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_me"
+			        }
+			      ]
+			    },
+			    "gasto_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.año": {
+			          "Target": {
+			            "Entity": "gasto.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_años"
+			        }
+			      ]
+			    },
+			    "gasto_has_tipo_gasto": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.tipo_gasto": {
+			          "Target": {
+			            "Entity": "gasto.tipo_gasto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.tipo_gasto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_tipo_gastos"
+			        }
+			      ]
+			    },
+			    "gasto_has_me_SAT_3": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.me_SAT_3": {
+			          "Target": {
+			            "Entity": "gasto.me_SAT_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.me_SAT_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_me_SAT_3"
+			        }
+			      ]
+			    },
+			    "gasto_has_me_SAT_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.me_SAT_2": {
+			          "Target": {
+			            "Entity": "gasto.me_SAT_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.me_SAT_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_me_SAT_2"
+			        }
+			      ]
+			    },
+			    "gasto_has_me_SAT": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.me_SAT": {
+			          "Target": {
+			            "Entity": "gasto.me_SAT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.me_SAT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_me_SAT"
+			        }
+			      ]
+			    },
+			    "gasto_has_monto": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.monto": {
+			          "Target": {
+			            "Entity": "gasto.monto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.monto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_monto"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gasto.monto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monto_indicates_how_expensive_gastos_are"
+			        }
+			      ]
+			    },
+			    "gasto_has_descripcion": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.descripcion": {
+			          "Target": {
+			            "Entity": "gasto.descripcion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.descripcion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_descripcions"
+			        }
+			      ]
+			    },
+			    "gasto_has_concepto": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.concepto": {
+			          "Target": {
+			            "Entity": "gasto.concepto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.concepto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_conceptos"
+			        }
+			      ]
+			    },
+			    "gasto_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Gastos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gasto": {
+			          "Target": {
+			            "Entity": "gasto"
+			          }
+			        },
+			        "gasto.fecha": {
+			          "Target": {
+			            "Entity": "gasto.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gasto"
+			            },
+			            "Object": {
+			              "Role": "gasto.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gastos_have_fechas"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_trimestre_has_cea_fecha_pago_me": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.trimestre": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.trimestre"
+			          }
+			        },
+			        "cea.fecha_pago.me": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.me"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "cea.fecha_pago.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "cea_fecha_pago_me_has_cea_fecha_pago_día": {
+			      "Binding": {
+			        "ConceptualEntity": "CEA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cea.fecha_pago.me": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.me"
+			          }
+			        },
+			        "cea.fecha_pago.día": {
+			          "Target": {
+			            "Entity": "cea.fecha_pago.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.me"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.día"
+			            },
+			            "Object": {
+			              "Role": "cea.fecha_pago.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "cea.fecha_pago.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "cea.fecha_pago.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

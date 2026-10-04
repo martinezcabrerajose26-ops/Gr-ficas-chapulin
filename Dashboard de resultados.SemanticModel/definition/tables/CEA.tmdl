@@ -1,0 +1,251 @@
+table CEA
+	lineageTag: b9be631b-551d-41b8-8b9b-5d8e3f8a90c8
+
+	measure 'CEA Total Pagado' = SUM('CEA'[Monto])
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 9bcb9402-ac30-448d-851c-4aba1658ae98
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure 'CEA Cantidad de Pagos' = COUNTROWS('CEA')
+		formatString: 0
+		lineageTag: 84fb0f8c-2bd5-4726-828f-3e99a5a82477
+
+	measure 'CEA Promedio Mensual' =
+			
+			AVERAGEX(
+			    VALUES('CEA'[CEA Mes Número]),
+			    [CEA Total Pagado]
+			)
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: fa37da43-e05c-4206-a2e3-c48e1db3fd19
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure 'CEA Monto Pagado' =
+			
+			SUM('CEA'[Monto])
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 05b2511d-4baf-4f51-acc0-3f19f1f71bb2
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure 'CEA Monto Correspondiente' =
+			
+			CALCULATE(
+			    SUM('CEA'[Monto]),
+			    USERELATIONSHIP(
+			        'Calendario CEA'[Date],
+			        'CEA'[CEA Fecha Recibo]
+			    )
+			)
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 39aa0c2f-5f64-4ed0-a172-6f96d2de22c0
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column FechaPago
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aa7790cb-3657-4848-aacd-b547588a6625
+		summarizeBy: none
+		sourceColumn: FechaPago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Concepto
+		dataType: string
+		lineageTag: da2c80a1-0af7-476b-8cad-df07a3918f6c
+		summarizeBy: none
+		sourceColumn: Concepto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monto
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 8ae7b5aa-dfce-4b4d-a07f-70d1490ff098
+		summarizeBy: sum
+		sourceColumn: Monto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column 'CEA Año Pago' = YEAR('CEA'[FechaPago])
+		formatString: 0
+		lineageTag: a4c7cfe6-c5d9-4b44-8b43-7c14befab96e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEA Mes Número' = MONTH('CEA'[FechaPago])
+		formatString: 0
+		lineageTag: 624ff663-b1c2-46bb-bb1b-257d1ec46b5c
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEA Mes Nombre' = FORMAT('CEA'[FechaPago], "MMMM")
+		lineageTag: f358f15b-de13-4718-9994-ce3a3aa8962a
+		summarizeBy: none
+		sortByColumn: 'CEA Mes Número'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEA Periodo Recibo Texto'
+		dataType: string
+		lineageTag: 840b209a-c388-49fa-8a75-d25e963ab552
+		summarizeBy: none
+		sourceColumn: CEA Periodo Recibo Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEA Fecha Recibo Texto'
+		dataType: string
+		lineageTag: 8c291f34-9e96-4969-b948-ad482b3b56f6
+		summarizeBy: none
+		sourceColumn: CEA Fecha Recibo Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEA Fecha Recibo'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2373119d-47a2-4ff0-9cf0-2b3ae6d29134
+		summarizeBy: none
+		sourceColumn: CEA Fecha Recibo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition CEA = m
+		mode: import
+		source = ```
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\josca\OneDrive\Desktop\Dashboard condomio git\Chapulin PRESUPUESTO JAC2026.xlsm"), null, true),
+				    CEA_Sheet = Origen{[Item="CEA",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(CEA_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Column1", type date}, {"PERIODO DIC 2019 A ENERO 2025", type text}, {"Column3", Int64.Type}}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Tipo cambiado",1),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Filas superiores quitadas",{{"Column1", "FechaPago"}, {"PERIODO DIC 2019 A ENERO 2025", "Concepto"}, {"Column3", "Monto"}}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"Monto", Currency.Type}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado1", "CEA Periodo Recibo Texto", each if Text.Contains([Concepto], "(") and Text.Contains([Concepto], ")") then
+				    Text.BetweenDelimiters([Concepto], "(", ")")
+				else
+				    [Concepto]),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Personalizada agregada", "CEA Fecha Recibo Texto", each if Text.Contains([CEA Periodo Recibo Texto], " A ") then
+				    Text.Trim(Text.AfterDelimiter([CEA Periodo Recibo Texto], " A "))
+				else
+				    Text.Trim([CEA Periodo Recibo Texto])),
+				    #"Personalizada agregada2" = Table.AddColumn(#"Personalizada agregada1", "CEA Fecha Recibo", each let
+				    conceptoOriginal = Text.Upper(Text.Trim([Concepto])),
+				
+				    // Caso especial 1: macromedidor o instalación
+				    fechaEspecial =
+				        if Text.Contains(conceptoOriginal, "MACROMEDIDOR") 
+				            or Text.Contains(conceptoOriginal, "INSTALACIÓN") 
+				            or Text.Contains(conceptoOriginal, "INSTALACION") then
+				            Date.From([FechaPago])
+				        else
+				            null,
+				
+				    // Extrae textos entre paréntesis
+				    partesParentesis = 
+				        List.Transform(
+				            Text.Split(conceptoOriginal, "("),
+				            each if Text.Contains(_, ")") then Text.BeforeDelimiter(_, ")") else null
+				        ),
+				
+				    periodosValidos =
+				        List.RemoveNulls(partesParentesis),
+				
+				    // Si hay varios periodos, toma el último.
+				    // Esto resuelve el caso:
+				    // (03 MARZO A 7 ABRIL 2022) Y (07 ABRIL A 06 MAYO 2022)
+				    periodo =
+				        if List.Count(periodosValidos) > 0 then
+				            List.Last(periodosValidos)
+				        else
+				            conceptoOriginal,
+				
+				    // Limpieza de texto
+				    texto0 = Text.Upper(Text.Trim(periodo)),
+				    texto1 = Text.Replace(texto0, " DEL ", " "),
+				    texto2 = Text.Replace(texto1, " DE ", " "),
+				
+				    // Extrae la fecha final del periodo
+				    fechaFinalTexto =
+				        if Text.Contains(texto2, " AL ") then
+				            Text.Trim(Text.AfterDelimiter(texto2, " AL "))
+				        else if Text.Contains(texto2, " A ") then
+				            Text.Trim(Text.AfterDelimiter(texto2, " A "))
+				        else
+				            Text.Trim(texto2),
+				
+				    // Reemplaza meses por número
+				    m1 = Text.Replace(fechaFinalTexto, "ENERO", "01"),
+				    m2 = Text.Replace(m1, "ENE", "01"),
+				    m3 = Text.Replace(m2, "FEBRERO", "02"),
+				    m4 = Text.Replace(m3, "FEB", "02"),
+				    m5 = Text.Replace(m4, "MARZO", "03"),
+				    m6 = Text.Replace(m5, "MAR", "03"),
+				    m7 = Text.Replace(m6, "ABRIL", "04"),
+				    m8 = Text.Replace(m7, "ABR", "04"),
+				    m9 = Text.Replace(m8, "MAYO", "05"),
+				    m10 = Text.Replace(m9, "MAY", "05"),
+				    m11 = Text.Replace(m10, "JUNIO", "06"),
+				    m12 = Text.Replace(m11, "JUN", "06"),
+				    m13 = Text.Replace(m12, "JULIO", "07"),
+				    m14 = Text.Replace(m13, "JUL", "07"),
+				    m15 = Text.Replace(m14, "AGOSTO", "08"),
+				    m16 = Text.Replace(m15, "AGO", "08"),
+				    m17 = Text.Replace(m16, "SEPTIEMBRE", "09"),
+				    m18 = Text.Replace(m17, "SEP", "09"),
+				    m19 = Text.Replace(m18, "OCTUBRE", "10"),
+				    m20 = Text.Replace(m19, "OCT", "10"),
+				    m21 = Text.Replace(m20, "NOVIEMBRE", "11"),
+				    m22 = Text.Replace(m21, "NOV", "11"),
+				    m23 = Text.Replace(m22, "DICIEMBRE", "12"),
+				    m24 = Text.Replace(m23, "DIC", "12"),
+				
+				    partes = List.Select(Text.Split(Text.Trim(m24), " "), each _ <> ""),
+				    cantidad = List.Count(partes),
+				
+				    fechaCalculada =
+				        if cantidad = 3 then
+				            #date(
+				                Number.FromText(partes{2}),
+				                Number.FromText(partes{1}),
+				                Number.FromText(partes{0})
+				            )
+				        else if cantidad = 2 then
+				            #date(
+				                Date.Year([FechaPago]),
+				                Number.FromText(partes{1}),
+				                Number.FromText(partes{0})
+				            )
+				        else
+				            null,
+				
+				    resultado =
+				        if fechaEspecial <> null then
+				            fechaEspecial
+				        else
+				            fechaCalculada
+				in
+				    resultado),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Personalizada agregada2",{{"CEA Fecha Recibo", type date}})
+				in
+				    #"Tipo cambiado2"
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

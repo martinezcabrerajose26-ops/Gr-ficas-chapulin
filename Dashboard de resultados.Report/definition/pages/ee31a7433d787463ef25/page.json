@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ee31a7433d787463ef25",
+  "displayName": "Resumen Mensual",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

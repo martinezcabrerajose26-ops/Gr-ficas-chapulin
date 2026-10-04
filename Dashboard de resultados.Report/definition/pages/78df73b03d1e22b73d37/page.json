@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "78df73b03d1e22b73d37",
+  "displayName": "Comparativa Mensual CEA",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

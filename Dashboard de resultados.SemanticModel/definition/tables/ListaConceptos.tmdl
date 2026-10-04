@@ -1,0 +1,33 @@
+table ListaConceptos
+	lineageTag: bfaa55a7-db6b-4495-a785-42e62fdcc806
+
+	column TipoGasto
+		lineageTag: 942402bb-8e80-4673-8acb-670918c8031e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [TipoGasto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Concepto
+		lineageTag: b135038e-75cd-42de-bcab-73db7981164b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Concepto]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ListaConceptos = calculated
+		mode: import
+		source =
+				
+				DISTINCT(
+				    SELECTCOLUMNS(
+				        Gastos,
+				        "TipoGasto", Gastos[TipoGasto],
+				        "Concepto", Gastos[CONCEPTO]
+				    )
+				)
+
+	annotation PBI_Id = 69a64b77a7004f81884714944192c0c2
+

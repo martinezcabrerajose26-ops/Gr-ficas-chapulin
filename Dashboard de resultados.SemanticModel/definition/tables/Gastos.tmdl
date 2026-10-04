@@ -1,0 +1,165 @@
+table Gastos
+	lineageTag: 306c8039-79c3-46c8-a79a-ef3b88f80512
+
+	measure 'Total Gastos' = SUM('Gastos'[MONTO])
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		lineageTag: 88dc69ff-98d4-4a8b-9536-3608b0f737a2
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Gastos Fijos' =
+			
+			CALCULATE(
+			    SUM('Gastos'[MONTO]),
+			    'Gastos'[TipoGasto] = "Fijo"
+			)
+		lineageTag: 81c6a5fe-3b7c-4747-a92a-277f186c56cc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gastos Variables' =
+			
+			CALCULATE(
+			    SUM('Gastos'[MONTO]),
+			    'Gastos'[TipoGasto] = "Variable"
+			)
+		lineageTag: e1ffd21b-2bb2-41a5-a372-c5672ae28637
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Gastos Variables' =
+			
+			DIVIDE(
+			    [Gastos Variables],
+			    [Total Gastos],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 53ba3bd2-b047-4820-b2b8-ad68837e66b5
+
+	column FECHA
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 171924eb-7fb3-423e-9e0e-2f6658bbfd02
+		summarizeBy: none
+		sourceColumn: FECHA
+
+		variation Variación
+			isDefault
+			relationship: 3ac47768-2ac1-47d7-bc2e-233f985254cc
+			defaultHierarchy: LocalDateTable_4536466b-ed21-409a-9c98-5c6f77233bff.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CONCEPTO
+		dataType: string
+		lineageTag: 96804944-7f0b-4e0e-a886-f7d767ed4f2f
+		summarizeBy: none
+		sourceColumn: CONCEPTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPCION
+		dataType: string
+		lineageTag: a8be95e9-42d0-42e1-b524-e4f950dbb7a8
+		summarizeBy: none
+		sourceColumn: DESCRIPCION
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTO
+		dataType: double
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 4e8cf1f8-7670-4eb6-8758-f7e0186143bc
+		summarizeBy: sum
+		sourceColumn: MONTO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	column 'Mes SAT'
+		dataType: string
+		lineageTag: 0b63133b-80fb-4202-847d-5d6766f9a23e
+		summarizeBy: none
+		sourceColumn: Mes SAT
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes SAT 2'
+		dataType: string
+		lineageTag: 0ec3288e-f41e-4dd7-8998-5ad4543f931a
+		summarizeBy: none
+		sourceColumn: Mes SAT 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes SAT 3'
+		dataType: string
+		lineageTag: 594e2701-a2a1-4d03-aa40-261bc647110f
+		summarizeBy: none
+		sourceColumn: Mes SAT 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoGasto
+		dataType: string
+		lineageTag: e15fea65-d15d-4912-a251-4ba240a28020
+		summarizeBy: none
+		sourceColumn: TipoGasto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año = YEAR('Gastos'[FECHA])
+		formatString: 0
+		lineageTag: 17d6ca2d-a1d7-4075-a7a8-0f64e302ef1f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes = FORMAT('Gastos'[FECHA], "MMMM")
+		lineageTag: 3374f666-4cc1-4bf4-8cd7-d1bfddb1a100
+		summarizeBy: none
+		sortByColumn: MesNum
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNum = MONTH('gastos'[FECHA])
+		formatString: 0
+		lineageTag: 032df57e-7844-47d2-963f-05eec6f11ce3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATALOGO
+		dataType: string
+		lineageTag: bacd8ce7-1d3d-4dde-bc03-78b876c75f2a
+		summarizeBy: none
+		sourceColumn: CATALOGO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Gastos = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\josca\OneDrive\Desktop\Dashboard condomio git\Chapulin PRESUPUESTO JAC2026.xlsm"), null, true),
+				    Gastos_Sheet = Origen{[Item="Gastos",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Gastos_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"FECHA", type date}, {"Column2", type text}, {"DESCRIPCION", type text}, {"MONTO", type number}, {"Mes SAT", type any}, {"Mes SAT 2", type any}, {"Mes SAT 3", type any}, {"Column8", type any}, {"Column9", type any}, {"Column10", type any}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}, {"Column14", type any}, {"Column15", type any}, {"Column16", type any}, {"Column17", type any}, {"Column18", type any}, {"Column19", type any}, {"Column20", type any}, {"Column21", type any}, {"Column22", type any}, {"Column23", type any}, {"Column24", type any}, {"Column25", type any}, {"Column26", type any}, {"CATALOGO", type text}, {"MESES", Int64.Type}, {"Column29", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17", "Column18", "Column19", "Column20", "Column21", "Column22", "Column23", "Column24", "Column25", "Column26", "MESES", "Column29"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas quitadas",{{"Column2", "CONCEPTO"}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "TipoGasto", each if [CONCEPTO] <> null and Text.StartsWith([CONCEPTO], "F.") then "Fijo"
+				else if [CONCEPTO] <> null and Text.StartsWith([CONCEPTO], "V.") then "Variable"
+				else "Otro")
+				in
+				    #"Personalizada agregada"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Exception
+

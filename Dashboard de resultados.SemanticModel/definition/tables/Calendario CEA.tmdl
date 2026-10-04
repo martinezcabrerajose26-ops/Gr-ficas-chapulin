@@ -1,0 +1,83 @@
+table 'Calendario CEA'
+	lineageTag: 12df2499-a036-49c8-b939-893d2bf04528
+
+	column Date
+		formatString: General Date
+		lineageTag: 0bdf4418-6f3c-463f-9ce6-8cc3a01b96e7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 47a8be76-4fb7-448f-8031-12d8d3a46dc1
+			defaultHierarchy: LocalDateTable_3e29391a-c7b5-4d76-b94b-dca5e355b445.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: a239c823-9d9d-444e-a5f8-decbb479e01d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Número'
+		formatString: 0
+		lineageTag: 589b3df8-cadf-4edf-926d-4bf2bb23b187
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mes Número]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nombre'
+		lineageTag: e6632dc1-5b79-44c3-abcf-7ab5fc80800e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Nombre]
+		sortByColumn: 'Mes Número'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Año'
+		lineageTag: 9f97fbc7-84bf-4f1d-a281-c79e38688bf2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Calendario CEA' = calculated
+		mode: import
+		source =
+				
+				VAR FechaMinima =
+				    MINX(
+				        UNION(
+				            SELECTCOLUMNS('CEA', "Fecha", 'CEA'[FechaPago]),
+				            SELECTCOLUMNS('CEA', "Fecha", 'CEA'[CEA Fecha Recibo])
+				        ),
+				        [Fecha]
+				    )
+				VAR FechaMaxima =
+				    MAXX(
+				        UNION(
+				            SELECTCOLUMNS('CEA', "Fecha", 'CEA'[FechaPago]),
+				            SELECTCOLUMNS('CEA', "Fecha", 'CEA'[CEA Fecha Recibo])
+				        ),
+				        [Fecha]
+				    )
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(FechaMinima, FechaMaxima),
+				    "Año", YEAR([Date]),
+				    "Mes Número", MONTH([Date]),
+				    "Mes Nombre", FORMAT([Date], "MMMM"),
+				    "Mes Año", FORMAT([Date], "MMM yyyy")
+				)
+
+	annotation PBI_Id = 851662b7e4f347a8bbcf42b066ea76f3
+

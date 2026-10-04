@@ -1,0 +1,24 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Gastos","CEA"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Gastos
+ref table DateTableTemplate_d398d796-6ed6-407d-ac60-fec440e6eba1
+ref table LocalDateTable_4536466b-ed21-409a-9c98-5c6f77233bff
+ref table ListaConceptos
+ref table CEA
+ref table 'Calendario CEA'
+ref table LocalDateTable_3e29391a-c7b5-4d76-b94b-dca5e355b445
+
+ref cultureInfo es-MX
+
